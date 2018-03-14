@@ -58,4 +58,4 @@ function checkOutAndLint () {
 
 exec('git rev-parse --verify master')
   .then(runLinter)
-  .catch(checkOutAndLint)
+  .catch(checkOutAndLint) // In case of failure, check out 'master' from remote.
